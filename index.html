@@ -2,37 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Your Name | Engineering Portfolio</title>
+    <title>Your Name | Mechanical Engineering</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        :root {
-            --bg: #0f172a;
-            --card: #111827;
-            --text: #e5e7eb;
-            --muted: #9ca3af;
-            --accent: #38bdf8;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Inter", system-ui, sans-serif;
-        }
-
         body {
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
         }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        /* ---------- HERO ---------- */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -40,7 +20,6 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 3rem 1rem;
         }
 
         .hero img {
@@ -48,22 +27,21 @@
             height: 160px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--accent);
+            border: 3px solid #38bdf8;
             margin-bottom: 1.5rem;
         }
 
         .hero h1 {
             font-size: 2.8rem;
-            font-weight: 700;
+            margin: 0;
         }
 
         .hero h2 {
             font-size: 1.2rem;
-            color: var(--muted);
+            color: #9ca3af;
             margin-top: 0.5rem;
         }
 
-        /* ---------- PROJECT GRID ---------- */
         .projects {
             max-width: 1200px;
             margin: 0 auto;
@@ -73,173 +51,101 @@
             gap: 2rem;
         }
 
-        .project-card {
-            background: var(--card);
+        .card {
+            background: #111827;
             border-radius: 16px;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
         }
 
-        .project-card:hover {
+        .card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
         }
 
-        .project-card img {
+        .card img {
             width: 100%;
             height: 180px;
             object-fit: cover;
         }
 
-        .project-content {
+        .card-content {
             padding: 1.2rem;
         }
 
-        .project-content h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.4rem;
+        .card-content h3 {
+            margin: 0 0 0.5rem;
         }
 
-        .project-content p {
+        .card-content p {
+            color: #9ca3af;
             font-size: 0.95rem;
-            color: var(--muted);
         }
 
-        /* ---------- PROJECT PAGES ---------- */
-        .project-page {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 5rem 1.5rem;
-        }
-
-        .project-page img {
-            width: 100%;
-            border-radius: 16px;
-            margin: 2rem 0;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-top: 2rem;
-            color: var(--accent);
-        }
-
-        /* ---------- RESPONSIVE ---------- */
-        @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
+        a {
+            text-decoration: none;
+            color: inherit;
         }
     </style>
 </head>
 
 <body>
 
-<!-- ================= HERO ================= -->
-<section class="hero" id="home">
+<section class="hero">
     <img src="profile.jpg" alt="Your photo">
     <h1>Your Name</h1>
     <h2>Georgia Institute of Technology — Mechanical Engineering</h2>
 </section>
 
-<!-- ================= PROJECT GRID ================= -->
 <section class="projects">
 
-    <a href="#project1" class="project-card">
-        <img src="project1.jpg" alt="Project 1">
-        <div class="project-content">
+    <a href="project1.html" class="card">
+        <img src="project1.jpg">
+        <div class="card-content">
             <h3>Project One</h3>
-            <p>Short description of the project.</p>
+            <p>Short one-line description.</p>
         </div>
     </a>
 
-    <a href="#project2" class="project-card">
-        <img src="project2.jpg" alt="Project 2">
-        <div class="project-content">
+    <a href="project2.html" class="card">
+        <img src="project2.jpg">
+        <div class="card-content">
             <h3>Project Two</h3>
-            <p>Short description of the project.</p>
+            <p>Short one-line description.</p>
         </div>
     </a>
 
-    <a href="#project3" class="project-card">
-        <img src="project3.jpg" alt="Project 3">
-        <div class="project-content">
+    <a href="project3.html" class="card">
+        <img src="project3.jpg">
+        <div class="card-content">
             <h3>Project Three</h3>
-            <p>Short description of the project.</p>
+            <p>Short one-line description.</p>
         </div>
     </a>
 
-    <a href="#project4" class="project-card">
-        <img src="project4.jpg" alt="Project 4">
-        <div class="project-content">
+    <a href="project4.html" class="card">
+        <img src="project4.jpg">
+        <div class="card-content">
             <h3>Project Four</h3>
-            <p>Short description of the project.</p>
+            <p>Short one-line description.</p>
         </div>
     </a>
 
-    <a href="#project5" class="project-card">
-        <img src="project5.jpg" alt="Project 5">
-        <div class="project-content">
+    <a href="project5.html" class="card">
+        <img src="project5.jpg">
+        <div class="card-content">
             <h3>Project Five</h3>
-            <p>Short description of the project.</p>
+            <p>Short one-line description.</p>
         </div>
     </a>
 
-    <a href="#project6" class="project-card">
-        <img src="project6.jpg" alt="Project 6">
-        <div class="project-content">
+    <a href="project6.html" class="card">
+        <img src="project6.jpg">
+        <div class="card-content">
             <h3>Project Six</h3>
-            <p>Short description of the project.</p>
+            <p>Short one-line description.</p>
         </div>
     </a>
 
-</section>
-
-<!-- ================= PROJECT PAGES ================= -->
-
-<section class="project-page" id="project1">
-    <h1>Project One</h1>
-    <img src="project1.jpg" alt="Project One">
-    <p>
-        Detailed description of Project One. Explain the problem, your role,
-        tools used (CAD, MATLAB, Python, etc.), and outcomes.
-    </p>
-    <a href="#home" class="back-link">← Back to portfolio</a>
-</section>
-
-<section class="project-page" id="project2">
-    <h1>Project Two</h1>
-    <img src="project2.jpg" alt="Project Two">
-    <p>Detailed description of Project Two.</p>
-    <a href="#home" class="back-link">← Back to portfolio</a>
-</section>
-
-<section class="project-page" id="project3">
-    <h1>Project Three</h1>
-    <img src="project3.jpg" alt="Project Three">
-    <p>Detailed description of Project Three.</p>
-    <a href="#home" class="back-link">← Back to portfolio</a>
-</section>
-
-<section class="project-page" id="project4">
-    <h1>Project Four</h1>
-    <img src="project4.jpg" alt="Project Four">
-    <p>Detailed description of Project Four.</p>
-    <a href="#home" class="back-link">← Back to portfolio</a>
-</section>
-
-<section class="project-page" id="project5">
-    <h1>Project Five</h1>
-    <img src="project5.jpg" alt="Project Five">
-    <p>Detailed description of Project Five.</p>
-    <a href="#home" class="back-link">← Back to portfolio</a>
-</section>
-
-<section class="project-page" id="project6">
-    <h1>Project Six</h1>
-    <img src="project6.jpg" alt="Project Six">
-    <p>Detailed description of Project Six.</p>
-    <a href="#home" class="back-link">← Back to portfolio</a>
 </section>
 
 </body>
