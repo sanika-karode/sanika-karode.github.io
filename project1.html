@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Project One | Your Name</title>
+    <title>ME 2110 Autonomous Robot | Sanika Karode</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -20,16 +20,43 @@
             padding: 4rem 1.5rem;
         }
 
-        img {
+        .image-placeholder {
             width: 100%;
+            height: 400px;
+            background: #1e293b;
+            border: 2px dashed #38bdf8;
             border-radius: 16px;
             margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #38bdf8;
+            font-weight: bold;
         }
+
+        h1 { color: #f8fafc; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        h2 { color: #38bdf8; margin-top: 2.5rem; border-left: 4px solid #38bdf8; padding-left: 1rem; }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+            background: #1e293b;
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .spec-item { font-size: 0.9rem; }
+        .spec-label { color: #38bdf8; font-weight: bold; display: block; }
 
         a {
             color: #38bdf8;
             text-decoration: none;
         }
+        
+        ul { padding-left: 1.2rem; }
+        li { margin-bottom: 0.5rem; }
     </style>
 </head>
 
@@ -38,17 +65,49 @@
 <div class="container">
     <a href="index.html">← Back to Portfolio</a>
 
-    <h1>Project One</h1>
-    <img src="project1.jpg" alt="Project One">
+    <h1>ME 2110: Autonomous Robotics Competition</h1>
 
+    <img src="ME2110.png" alt="ME 2110 Final Robot Assembly">
+
+    <h2>Project Overview</h2>
     <p>
-        Full project description goes here. Explain the problem,
-        your approach, tools used (CAD, MATLAB, Python, FEA, etc.),
-        and outcomes.
+        The objective of this project was to design and build an autonomous robot to compete in a 40-second sprint competition. The robot was required to perform multiple high-precision tasks: exiting a home base, extinguishing a fire via a lever, lighting a bonfire by pulling torches, and returning sheep to their paddocksThe final system was constrained by a $120 budget and a strict 12" x 24" x 18" footprint.
     </p>
 
+    <div class="specs-grid">
+        <div class="spec-item"><span class="spec-label">Tools Used</span>Solidworks, FDM 3D Printing, Laser Cutting (MDF)</div>
+        <div class="spec-item"><span class="spec-label">Core Tech</span>Arduino, Pneumatic Actuators, DC Motors</div>
+    </div>
+
+    <h2>My Contributions</h2>
     <p>
-        Add bullet points, figures, or results as needed.
+        As a key member of a four-person team, I contributed to various aspects of the robot's design, development, and documentation:
+    </p>
+    <ul>
+        <li><strong>System Architecture:</strong> Co-developed the sheep and fire subsystems, selecting a balance of pneumatic and motor-driven mechanisms to overcome the competition's two-motor limit.</li>
+        <li><strong>Conceptual Design & Selection:</strong> Contributed to the development of alternative design concepts and utilized a Concept Evaluation Matrix to select the most reliable and cost-effective iteration.</li>
+        <li><strong>CAD & Design Overview:</strong> Assisted in creating CAD models and design documentation for the subsystems to ensure all components fit within other subsystems and the required engineering specifications.</li>
+    </ul>
+
+    <img src="2110_Breakdown.png" alt="ME 2110 Final Robot Assembly">
+
+    <h2>Key Mechanisms & Performance</h2>
+    <p>
+        Our design leveraged a hybrid approach of pneumatics and mechanical systems to maximize efficiency:
+    </p>
+    <ul>
+        <li><strong>Fire Extinguishment:</strong> A motor-driven telescoping arm extending 39" to fully activate the fire lever.</li>
+        <li><strong>Bonfire Lighting:</strong> A pneumatic-actuated horizontal scissor lift that extended 22.4" to pull torches onto the target bullseye.</li>
+        <li><strong>Sheep Deposition:</strong> A height-adjustable ramp and pneumatic piston system designed to deposit sheep into paddocks of varying heights.</li>
+        <li><strong>Eel and Fish:</strong> A diameter filtering design with extension slides that fall passively with the activation of the bonfire system.</li>
+        <li><strong>Drivetrain:</strong> A 1:4 gear ratio rear-wheel drive that reduced travel time from 8 seconds to under 4 seconds.</li>
+    </ul>
+
+    <img src="Task Success Rate.png" alt="ME 2110 Final Robot Assembly">
+
+    <h2>Outcomes</h2>
+    <p>
+        The final robot made it to the top 25% of all competing teams and getting the highest score in our specific lab section. The final robot design focused on prioritizing reliability over excessive complexity. Through iterative testing, we increased our points by 14% by optimizing the connecting arms in the telescoping system and switching to an aluminum hex axle to prevent gear slippage.
     </p>
 </div>
 
