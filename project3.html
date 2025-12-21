@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Project One | Your Name</title>
+    <title>Regenerative Braking Analysis | Sanika Karode</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -20,16 +20,92 @@
             padding: 4rem 1.5rem;
         }
 
-        img {
-            width: 100%;
-            border-radius: 16px;
+        /* --- ADVANCED SLIDER STYLES --- */
+        .slider-wrapper {
+            position: relative;
             margin: 2rem 0;
         }
 
-        a {
-            color: #38bdf8;
-            text-decoration: none;
+        .slider {
+            display: flex;
+            aspect-ratio: 16 / 9;
+            overflow-x: auto;
+            snap-type: x mandatory;
+            scroll-behavior: smooth;
+            border-radius: 16px;
+            border: 1px solid #334155;
+            scrollbar-width: none;
         }
+
+        .slider::-webkit-scrollbar { display: none; }
+
+        .slider img {
+            flex: 1 0 100%;
+            scroll-snap-align: start;
+            object-fit: cover;
+        }
+
+        /* Arrows */
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(15, 23, 42, 0.7);
+            color: white;
+            padding: 1rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            z-index: 10;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+        }
+
+        .slider-arrow:hover { background: #38bdf8; }
+        .arrow-prev { left: 1rem; }
+        .arrow-next { right: 1rem; }
+
+        .slider-nav {
+            display: flex;
+            column-gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .slider-nav a {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background-color: #334155;
+            transition: background 0.3s;
+        }
+        
+        .slider-nav a.active { background-color: #38bdf8; }
+
+        /* --- CONTENT STYLES --- */
+        h1 { color: #f8fafc; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        h2 { color: #38bdf8; margin-top: 2.5rem; border-left: 4px solid #38bdf8; padding-left: 1rem; }
+        
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+            background: #1e293b;
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .stat-value { color: #38bdf8; font-size: 1.5rem; font-weight: bold; display: block; }
+        .stat-label { font-size: 0.8rem; text-transform: uppercase; color: #94a3b8; }
+
+        a { color: #38bdf8; text-decoration: none; }
+        .highlight { color: #38bdf8; font-weight: 500; }
     </style>
 </head>
 
@@ -38,19 +114,94 @@
 <div class="container">
     <a href="index.html">← Back to Portfolio</a>
 
-    <h1>Project One</h1>
-    <img src="project1.jpg" alt="Project One">
+    <h1>Regenerative Braking & Sensor Analysis</h1>
+    <p><em>Mock Consulting Project for Webb Motorsports</em></p>
 
+    <div class="slider-wrapper">
+        <button class="slider-arrow arrow-prev" onclick="moveSlider(-1)">&#10094;</button>
+        <button class="slider-arrow arrow-next" onclick="moveSlider(1)">&#10095;</button>
+        
+        <div class="slider" id="main-slider">
+            <img id="slide-1" src="slide1.jpg" alt="Title Slide">
+            <img id="slide-2" src="slide2.jpg" alt="Major Deliverables">
+            <img id="slide-3" src="slide3.jpg" alt="Project Outline">
+            <img id="slide-4" src="slide4.jpg" alt="Technical Approach">
+            <img id="slide-5" src="slide5.jpg" alt="Integration Methods">
+            <img id="slide-6" src="slide6.jpg" alt="Differentiation Methods">
+            <img id="slide-7" src="slide7.jpg" alt="Error Analysis Graphs">
+            <img id="slide-8" src="slide8.jpg" alt="Baseline Results">
+            <img id="slide-9" src="slide9.jpg" alt="Noise Analysis Intro">
+            <img id="slide-10" src="slide10.jpg" alt="Gaussian Noise Results">
+            <img id="slide-11" src="slide11.jpg" alt="Quantization vs Dropout">
+            <img id="slide-12" src="slide12.jpg" alt="Sensor Recommendations">
+            <img id="slide-13" src="slide13.jpg" alt="Final Conclusion">
+        </div>
+
+        <div class="slider-nav" id="slider-dots">
+            </div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-card">
+            <span class="stat-label">Total Distance</span>
+            <span class="stat-value">11.99 km</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Baseline Energy</span>
+            <span class="stat-value">2,314.52 kJ</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Max Allowable Noise</span>
+            <span class="stat-value">0.12 m/s</span>
+        </div>
+    </div>
+
+    <h2>Technical Approach</h2>
     <p>
-        Full project description goes here. Explain the problem,
-        your approach, tools used (CAD, MATLAB, Python, FEA, etc.),
-        and outcomes.
+        I developed custom <span class="highlight">MATLAB</span> functions to quantify energy recovery efficiency. Using a hybrid integration approach (Simpson’s 1/3, 3/8, and Trapezoidal), I achieved <strong>O(h<sup>4</sup>) accuracy</strong>. This was verified against the UDDS dataset to establish a baseline regenerative energy of 2,314.52 kJ.
     </p>
 
+    
+
+    <h2>Quantization vs. Dropout Analysis</h2>
     <p>
-        Add bullet points, figures, or results as needed.
+        My sensitivity analysis revealed that energy estimation is far more susceptible to <strong>quantization</strong> than data dropout. Low-resolution sensors create "staircase" data, causing mathematical spikes in acceleration that lead to energy calculation errors exceeding 5%.
+    </p>
+
+    
+
+    <h2>Procurement Recommendation</h2>
+    <p>
+        For Webb Motorsports, I recommended prioritizing <strong>High-Resolution (q) sensors</strong>. The maximum allowable jitter was determined to be <strong>0.12 m/s</strong>; exceeding this threshold compromises the integrity of the regenerative braking analysis.
     </p>
 </div>
+
+<script>
+    const slider = document.getElementById('main-slider');
+    const dotsContainer = document.getElementById('slider-dots');
+    const totalSlides = 13;
+
+    // Create dots
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('a');
+        dot.href = `#slide-${i+1}`;
+        if (i === 0) dot.className = 'active';
+        dotsContainer.appendChild(dot);
+    }
+
+    function moveSlider(direction) {
+        const slideWidth = slider.clientWidth;
+        slider.scrollBy({ left: direction * slideWidth, behavior: 'smooth' });
+    }
+
+    // Update active dot on scroll
+    slider.addEventListener('scroll', () => {
+        const index = Math.round(slider.scrollLeft / slider.clientWidth);
+        const dots = dotsContainer.querySelectorAll('a');
+        dots.forEach((dot, i) => {
+            dot.className = i === index ? 'active' : '';
+        });
+    });
+</script>
 
 </body>
 </html>
