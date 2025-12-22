@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Go STEM! Kart | Sanika Karode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        /* --- VIDEO CONTAINER: IDENTICAL TO MAMA BEAR --- */
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%; /* Maintains 16:9 Aspect Ratio */
+            margin: 2rem 0;
+            border-radius: 16px;
+            background: #1e293b;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 16px;
+        }
+
+        /* --- IMAGE PLACEHOLDERS --- */
+        .image-placeholder {
+            width: 100%;
+            height: 400px;
+            background: #1e293b;
+            border: 2px dashed #38bdf8;
+            border-radius: 16px;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #38bdf8;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 { color: #f8fafc; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        h2 { color: #38bdf8; margin-top: 2.5rem; border-left: 4px solid #38bdf8; padding-left: 1rem; }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+            background: #1e293b;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+
+        .spec-item { font-size: 0.9rem; }
+        .spec-label { color: #38bdf8; font-weight: bold; display: block; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; }
+
+        a { color: #38bdf8; text-decoration: none; }
+        ul { padding-left: 1.2rem; }
+        li { margin-bottom: 0.8rem; }
+        .highlight { color: #38bdf8; font-weight: 500; }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <a href="index.html#projects">← Back to Portfolio</a>
+
+    <h1>Go STEM! Kart</h1>
+    <p><em>ME 1670 | Computer-Aided Design & Manufacturing</em></p>
+
+    <img src="goKart.png" alt="Project Two">
+
+    <h2>Project Overview</h2>
+    <p>
+        The Go STEM! Kart project challenged our team to design, model, and simulate a low-cost ($150 budget limit) go-kart from scratch. This project emphasized the transition from conceptual ideation to a fully realized digital prototype.
+    </p>
+
+    <div class="specs-grid">
+        <div class="spec-item"><span class="spec-label">Software</span>SolidWorks / Fusion 360</div>
+        <div class="spec-item"><span class="spec-label">Design Focus</span>Parametric Design & Assemblies</div>
+        <div class="spec-item"><span class="spec-label">Deliverables</span>Exploded Views & BOM</div>
+        <div class="spec-item"><span class="spec-label">Core Skills</span>Tolerance Analysis & Animation</div>
+    </div>
+
+    <h2>My Design Contributions</h2>
+    <p>
+        I was responsible for the design and modeling of the driver interface and structural chassis sub-assemblies:
+    </p>
+    <ul>
+        <li><strong>Driver Interface:</strong> Modeled the brake and accelerator pedals, steering wheel, and tire hubs.</li>
+        <li><strong>Structural Seating:</strong> Designed the multi-part chair assembly and the chair attachment bar system.</li>
+        <li><strong>Chassis Components:</strong> Created the floor plate, chassis rods, and the 2-rod/3-rod connectors that unified the frame.</li>
+    </ul>
+
+    <img src="1670_SubAssem.png" alt="Project Two">
+
+    <h2>Technical Challenges</h2>
+    <ul>
+        <li><strong>Dimensional Consistency:</strong> Coordinated overall dimensions prior to CAD using parametric dimensions.</li>
+        <li><strong>Mating Logic:</strong> Managed complex sub-assembly connections to ensure steering and pedal travel remained unconstrained.</li>
+        <li><strong>Compatibility Fixes:</strong> Created custom "basic parts" to assist with the practicality of mating during the final assembly phase.</li>
+    </ul>
+
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/EkhEYcEiDDY?rel=0" 
+            title="Go STEM! Kart Demo" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
+
+</body>
+</html>
