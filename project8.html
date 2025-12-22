@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mama Bear: Pregnancy Risk Analysis | Sanika Karode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            margin: 2rem 0;
+            border-radius: 16px;
+            background: #1e293b;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 16px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-github { background: #334155; color: white; }
+        .btn-github:hover { background: #475569; }
+        
+        .btn-demo { background: #38bdf8; color: #0f172a; }
+        .btn-demo:hover { background: #7dd3fc; }
+
+        .image-placeholder {
+            width: 100%;
+            height: 300px;
+            background: #1e293b;
+            border: 2px dashed #38bdf8;
+            border-radius: 16px;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #38bdf8;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h1 { color: #f8fafc; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        h2 { color: #38bdf8; margin-top: 2.5rem; border-left: 4px solid #38bdf8; padding-left: 1rem; }
+        
+        .tech-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            background: #1e293b;
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .tech-label { color: #38bdf8; font-weight: bold; display: block; text-transform: uppercase; font-size: 0.75rem; }
+
+        a { color: #38bdf8; text-decoration: none; }
+        ul { padding-left: 1.2rem; }
+        li { margin-bottom: 0.8rem; }
+        .highlight { color: #38bdf8; font-weight: 500; }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <a href="index.html">← Back to Portfolio</a>
+
+    <h1>Mama Bear: Pregnancy Health Insights</h1>
+    <p><em>Hacklytics 2025 | Women's Health & Machine Learning</em></p>
+
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/bawXhNkZQi0" 
+                title="Mama Bear Demo Video" allowfullscreen></iframe>
+    </div>
+
+    <div class="button-group">
+        <a href="https://github.com/sanika-karode/mama-bear" target="_blank" class="btn btn-github">
+            View on GitHub
+        </a>
+        <a href="https://www.youtube.com/watch?v=bawXhNkZQi0" target="_blank" class="btn btn-demo">
+            Watch Full Demo
+        </a>
+    </div>
+
+    <h2>Project Overview</h2>
+    <p>
+        <strong>Mama Bear</strong> is a web application developed during Hacklytics 2025 to empower pregnant women with data-driven health insights. By tracking vital metrics—including blood pressure, blood sugar, and heart rate—the app utilizes machine learning to categorize pregnancy risk factors, helping users make informed decisions for a stress-free pregnancy.
+    </p>
+
+    <div class="tech-box">
+        <div class="tech-item"><span class="tech-label">Machine Learning</span>XGBoost (85% Accuracy)</div>
+        <div class="tech-item"><span class="tech-label">Frontend/Backend</span>Streamlit & Python</div>
+        <div class="tech-item"><span class="tech-label">Development Tools</span>Google Colab, VS Code, GitHub</div>
+    </div>
+
+    <h2>Technical Execution</h2>
+    <ul>
+        <li><strong>Model Training:</strong> Trained an <span class="highlight">Extreme Gradient Boosting (XGBoost)</span> model on an open-source dataset of 1,000+ entries, achieving 85% predictive accuracy for high, medium, and low-risk factors.</li>
+        <li><strong>Full-Stack Integration:</strong> Successfully integrated the back-end ML model into a Streamlit web interface, allowing for real-time user input and risk assessment.</li>
+        <li><strong>Database Management:</strong> Configured a user profile system to log and store personal health data over time, overcoming initial challenges with data overwriting to ensure a continuous health history for each user.</li>
+    </ul>
+
+    <div class="image-placeholder">UI/UX Preview<br>(Risk Factor Dashboard & User Input Interface)</div>
+
+    <h2>Challenges & Growth</h2>
+    <p>
+        Our team focused on pivoting from an initial concept to a viable health-track product by identifying accessible, high-quality datasets. We mastered cross-functional integration—syncing back-end ML logic with a front-end interface across different development environments—and utilized Git/GitHub for collaborative version control.
+    </p>
+
+    <h2>Future Roadmap</h2>
+    <p>
+        Next steps for Mama Bear include training the model on more diverse datasets to increase predictive precision and developing interactive data visualizations (graphics) to help users track their health trends throughout their pregnancy journey.
+    </p>
+</div>
+
+</body>
+</html>
