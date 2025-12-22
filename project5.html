@@ -1,111 +1,116 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <title>Project One | Your Name</title>
-
+    <title>Hytech Racing Designs | Sanika Karode</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-
     <style>
-
         body {
-
             margin: 0;
-
             font-family: system-ui, sans-serif;
-
             background: #0f172a;
-
             color: #e5e7eb;
-
             line-height: 1.7;
-
         }
-
-
 
         .container {
-
             max-width: 900px;
-
             margin: 0 auto;
-
             padding: 4rem 1.5rem;
-
         }
 
-
-
-        img {
-
+        .image-placeholder {
             width: 100%;
-
+            height: 400px;
+            background: #1e293b;
+            border: 2px dashed #38bdf8;
             border-radius: 16px;
-
             margin: 2rem 0;
-
-        }
-
-
-
-        a {
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: #38bdf8;
-
-            text-decoration: none;
-
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
         }
 
+        h1 { color: #f8fafc; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        h2 { color: #38bdf8; margin-top: 2.5rem; border-left: 4px solid #38bdf8; padding-left: 1rem; }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+            background: #1e293b;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+
+        .spec-item { font-size: 0.9rem; }
+        .spec-label { color: #38bdf8; font-weight: bold; display: block; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; }
+
+        a { color: #38bdf8; text-decoration: none; }
+        ul { padding-left: 1.2rem; }
+        li { margin-bottom: 0.8rem; }
+        .highlight { color: #38bdf8; font-weight: 500; }
     </style>
-
 </head>
-
-
 
 <body>
 
-
-
 <div class="container">
-
     <a href="index.html#projects">← Back to Portfolio</a>
 
+    <h1>Formula SAE Headrest Design</h1>
+    <p><em>Hytech Racing | Mechanical Controls Team</em></p>
 
+    <img src="headrest.png" alt="Final Headrest Design">
 
-    <h1>Project Five</h1>
-
-    <img src="png" alt="Hytech Racing Designs">
-
-
-
+    <h2>Project Overview</h2>
     <p>
-
-        Full project description goes here. Explain the problem,
-
-        your approach, tools used (CAD, MATLAB, Python, FEA, etc.),
-
-        and outcomes.
-
+        As a member of the Mechanical Controls team for Georgia Tech's Formula SAE team, Hytech Racing, I was tasked with designing and validating a driver headrest assembly. This component is critical for driver safety and ergonomics, requiring strict adherence to <span class="highlight">FSAE competition rules</span> while optimizing for weight and structural integrity.
     </p>
 
+    <div class="specs-grid">
+        <div class="spec-item"><span class="spec-label">Tools</span>CATIA (CAD), FEA Simulation</div>
+        <div class="spec-item"><span class="spec-label">Materials</span>Steel Plate, Carbon Fiber, Foam</div>
+        <div class="spec-item"><span class="spec-label">Analysis</span>Finite Element Analysis, Hand Calcs</div>
+        <div class="spec-item"><span class="spec-label">Compliance</span>FSAE Safety Requirements</div>
+    </div>
 
-
+    <h2>Design Process</h2>
     <p>
-
-        Add bullet points, figures, or results as needed.
-
+        The development followed a rigorous engineering workflow to ensure the design met both performance and regulatory standards:
     </p>
+    <ul>
+        <li><strong>Ideation:</strong> Started with hand-sketching various design concepts to explore different mounting orientations and material distributions.</li>
+        <li><strong>Collaboration:</strong> Consulted with the Team Lead to evaluate concepts based on manufacturability and integration with the existing chassis.</li>
+        <li><strong>CAD Modeling:</strong> Utilized <span class="highlight">CATIA</span> to model the selected design, featuring a steel mounting plate integrated with a carbon fiber backing.</li>
+        <li><strong>Fastening Logic:</strong> Decided on a hybrid assembly method—attaching the steel plate to the carbon fiber using small high-strength bolts, and securing the foam headrest via heavy-duty Velcro for easy adjustment and replacement.</li>
+    </ul>
 
+    
+    <img src="headrest2.png" alt="Final Headrest Design">
+
+    <h2>Structural Validation & Iteration</h2>
+    <p>
+        Validation was a two-step process involving both computational simulation and classical mechanics:
+    </p>
+    <ul>
+        <li><strong>FEA Analysis:</strong> Performed Finite Element Analysis to identify structural weaknesses. The simulation showed the highest stress concentrations in the top-left and top-right sections of the steel plate.</li>
+        <li><strong>Design Iteration:</strong> Based on the FEA results, I increased the height of the steel plate to better distribute the load and reduce localized stress below the material's yield point.</li>
+        <li><strong>Hand Calculations:</strong> To verify the simulation, I modeled the design as a simple beam with two supports and ran hand calculations to ensure the theoretical displacement and stress aligned with the FEA data.</li>
+    </ul>
+
+    <h2>Outcome</h2>
+    <p>
+        The final design successfully met all safety criteria for the Formula SAE competition. The resulting headrest assembly provides a reliable safety interface for the driver while maintaining the lightweight profile necessary for competitive racing.
+    </p>
 </div>
 
-
-
 </body>
-
 </html>
