@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Project One | Your Name</title>
+    <title>Emote Facial Recognition | Sanika Karode</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -20,16 +20,84 @@
             padding: 4rem 1.5rem;
         }
 
-        img {
+        .video-container {
+            position: relative;
+            overflow: hidden;
             width: 100%;
-            border-radius: 16px;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
             margin: 2rem 0;
+            border-radius: 16px;
+            background: #1e293b;
         }
 
-        a {
-            color: #38bdf8;
-            text-decoration: none;
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 16px;
         }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-github { background: #334155; color: white; }
+        .btn-github:hover { background: #475569; }
+        
+        .btn-demo { background: #38bdf8; color: #0f172a; }
+        .btn-demo:hover { background: #7dd3fc; }
+
+        .image-placeholder {
+            width: 100%;
+            height: 300px;
+            background: #1e293b;
+            border: 2px dashed #38bdf8;
+            border-radius: 16px;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #38bdf8;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h1 { color: #f8fafc; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        h2 { color: #38bdf8; margin-top: 2.5rem; border-left: 4px solid #38bdf8; padding-left: 1rem; }
+        
+        .tech-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            background: #1e293b;
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .tech-label { color: #38bdf8; font-weight: bold; display: block; text-transform: uppercase; font-size: 0.75rem; }
+
+        a { color: #38bdf8; text-decoration: none; }
+        ul { padding-left: 1.2rem; }
+        li { margin-bottom: 0.8rem; }
+        .highlight { color: #38bdf8; font-weight: 500; }
     </style>
 </head>
 
@@ -38,17 +106,46 @@
 <div class="container">
     <a href="index.html">← Back to Portfolio</a>
 
-    <h1>Project Four</h1>
-    <img src="emote.png" alt="Project Four">
+    <h1>Emote: ML Facial Recognition</h1>
+    <p><em>HackGT 2024 | Assistive Technology Software</em></p>
 
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/XRNcGmtF5Zw" 
+                title="Emote Demo Video" allowfullscreen></iframe>
+    </div>
+
+    <div class="button-group">
+        <a href="https://github.com/vidhigupta413/hackgt11-emote" target="_blank" class="btn btn-github">
+            View on GitHub
+        </a>
+        <a href="https://www.youtube.com/watch?v=XRNcGmtF5Zw" target="_blank" class="btn btn-demo">
+            Watch Full Demo
+        </a>
+    </div>
+
+    <h2>Project Overview</h2>
     <p>
-        Full project description goes here. Explain the problem,
-        your approach, tools used (CAD, MATLAB, Python, FEA, etc.),
-        and outcomes.
+        Developed during HackGT 2024, <strong>Emote</strong> is a machine learning-based tool designed to help children with autism identify facial expressions. By using the <span class="highlight">Deepface</span> library, we co-developed a system that captures live images and provides instant emotional feedback.
     </p>
 
+    <div class="tech-box">
+        <div class="tech-item"><span class="tech-label">Machine Learning</span>Deepface, Jupyter Notebook</div>
+        <div class="tech-item"><span class="tech-label">Computer Vision</span>OpenCV (cv2)</div>
+        <div class="tech-item"><span class="tech-label">Deployment</span>Google Colab, Wix</div>
+    </div>
+
+    <h2>Technical Approach</h2>
+    <ul>
+        <li><strong>Real-time Detection:</strong> Implemented a live camera feed using OpenCV with custom keyboard triggers for taking photos and resetting the system.</li>
+        <li><strong>ML Pipeline:</strong> Integrated pre-trained emotion recognition models to analyze facial features and display bounding boxes with dominant labels.</li>
+        <li><strong>Stability:</strong> Optimized frame buffers and wait-key timing to resolve system latency and "spinning" issues during real-time processing.</li>
+    </ul>
+
+    
+
+    <h2>Future Vision</h2>
     <p>
-        Add bullet points, figures, or results as needed.
+        The next iteration of Emote moves the software from a computer screen to <strong>Augmented Reality (AR) glasses</strong>. Our goal is to provide real-time social cues in the user's natural environment, labeling emotions directly over people's faces as they interact.
     </p>
 </div>
 
