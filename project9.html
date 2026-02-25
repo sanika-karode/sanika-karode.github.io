@@ -50,6 +50,20 @@
 
     <h1>Ascend: Intelligent Route Optimization for Climbers</h1>
 
+        <div class="video-container">
+        <iframe src="https://www.youtube.com/watch?v=A2e7Y1sullc" 
+                title="Ascend Demo Video" allowfullscreen></iframe>
+    </div>
+
+    <div class="button-group">
+        <a href="https://github.com/sanika-karode/climbers" target="_blank" class="btn btn-github">
+            View on GitHub
+        </a>
+        <a href="https://www.youtube.com/watch?v=A2e7Y1sullc" target="_blank" class="btn btn-demo">
+            Watch Full Demo
+        </a>
+    </div>
+
     <img src="ascend.png" alt="Ascend Interface Screenshot">
 
     <h2>Project Overview</h2>
@@ -80,7 +94,10 @@
         <li><strong>Graph Intelligence Engine:</strong> Python-based engine using NetworkX to model climbing routes as weighted graphs and compute optimal paths using A* search.</li>
     </ul>
 
+    <img src="ascendGraph.png" alt="Ascend graph">
+
     <h2>Graph Modeling Approach</h2>
+    
     <p>
         Each hold is modeled as a node in a graph, with edges representing possible movements between holds. 
         Edge weights are dynamically calculated based on Euclidean distance, hold type, arm span constraints, and movement feasibility.
