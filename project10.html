@@ -40,9 +40,96 @@
 
         ul { padding-left: 1.2rem; }
         li { margin-bottom: 0.5rem; }
+        .carousel-container {
+    max-width: 100%;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.carousel-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    background: #1e293b;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #334155;
+}
+
+.carousel-wrapper img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(15, 23, 42, 0.7);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+.carousel-container p {
+    margin-top: 10px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
     </style>
 </head>
 
+<script>
+    // SLIDESHOW 1 (Design Visuals)
+    const designImages = ["renderedViews.png", "views.png", "thumbnailSketch.png"];
+    let designIndex = 0;
+
+    function changeDesignSlide(direction) {
+        designIndex += direction;
+
+        if (designIndex < 0) {
+            designIndex = designImages.length - 1;
+        } else if (designIndex >= designImages.length) {
+            designIndex = 0;
+        }
+
+        document.getElementById("designSlide").src = designImages[designIndex];
+        document.getElementById("designCounter").innerText =
+            `Image ${designIndex + 1} of ${designImages.length}`;
+    }
+
+    // SLIDESHOW 2 (Engineering Docs)
+    const docImages = ["gd&t.png", "drawing.png"];
+    let docIndex = 0;
+
+    function changeDocSlide(direction) {
+        docIndex += direction;
+
+        if (docIndex < 0) {
+            docIndex = docImages.length - 1;
+        } else if (docIndex >= docImages.length) {
+            docIndex = 0;
+        }
+
+        document.getElementById("docSlide").src = docImages[docIndex];
+        document.getElementById("docCounter").innerText =
+            `Image ${docIndex + 1} of ${docImages.length}`;
+    }
+</script>
 <body>
 
 <div class="container">
@@ -71,15 +158,20 @@
 
     <div class="slider">
     <button class="prev">&#10094;</button>
-    
-    <div class="slides">
-        <img src="renderedViews.png" class="slide active">
-        <img src="views.png" class="slide">
-        
-        <img src="thumbnailSketch.png" class="slide">
+
+<h2>Design Visuals</h2>
+
+<div class="carousel-container">
+    <div class="carousel-wrapper">
+        <img id="designSlide" src="renderedViews.png" alt="RickStation Visual">
+
+        <button class="nav-btn prev" onclick="changeDesignSlide(-1)">&#10094;</button>
+        <button class="nav-btn next" onclick="changeDesignSlide(1)">&#10095;</button>
     </div>
 
-    <button class="next">&#10095;</button>
+    <p id="designCounter">Image 1 of 3</p>
+</div>
+    
 </div>
 
     <h2>Design Inspiration</h2>
@@ -90,8 +182,18 @@
     </p>
 
     <h2>Engineering Documentation</h2>
-    <img src="gd&t.png" alt="RickStation Final Assembly Render">
-    <img src="drawing.png" class="slide">
+<h2>Engineering Documentation</h2>
+
+<div class="carousel-container">
+    <div class="carousel-wrapper">
+        <img id="docSlide" src="gd&t.png" alt="Engineering Drawing">
+
+        <button class="nav-btn prev" onclick="changeDocSlide(-1)">&#10094;</button>
+        <button class="nav-btn next" onclick="changeDocSlide(1)">&#10095;</button>
+    </div>
+
+    <p id="docCounter">Image 1 of 2</p>
+</div>
     <ul>
         <li>Multi-view and section drawings</li>
         <li>Fully dimensioned part working drawings</li>
