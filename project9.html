@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ascend | Sanika Karode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        h1 { color: #f8fafc; font-size: 2.5rem; margin-bottom: 0.5rem; }
+        h2 { color: #38bdf8; margin-top: 2.5rem; border-left: 4px solid #38bdf8; padding-left: 1rem; }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+            background: #1e293b;
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .spec-item { font-size: 0.9rem; }
+        .spec-label { color: #38bdf8; font-weight: bold; display: block; }
+
+        a { color: #38bdf8; text-decoration: none; }
+
+        ul { padding-left: 1.2rem; }
+        li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <a href="index.html#projects">← Back to Portfolio</a>
+
+    <h1>Ascend: Intelligent Route Optimization for Climbers</h1>
+
+    <img src="ascend.png" alt="Ascend Interface Screenshot">
+
+    <h2>Project Overview</h2>
+    <p>
+        Ascend is a full-stack intelligent route-analysis platform that helps climbers determine the most efficient path up a rock wall. 
+        Users upload a photo of a wall, select holds, and input personal metrics such as height and experience level. 
+        The system then computes a personalized, physically feasible climbing route using graph-based optimization.
+    </p>
+
+    <div class="specs-grid">
+        <div class="spec-item">
+            <span class="spec-label">Built With</span>
+            Python, NetworkX, FastAPI, React, Vite, PostgreSQL, SQLAlchemy
+        </div>
+        <div class="spec-item">
+            <span class="spec-label">Core Algorithm</span>
+            A* Search (Graph Optimization with Dynamic Hand-State Modeling)
+        </div>
+    </div>
+
+    <h2>Technical Architecture</h2>
+    <p>
+        Ascend was architected as a modular three-layer system:
+    </p>
+    <ul>
+        <li><strong>Frontend:</strong> Built with React and Vite, enabling users to upload wall images, select holds, and input body metrics through an intuitive UI.</li>
+        <li><strong>API Layer:</strong> FastAPI backend handling validation, structured communication, and database interactions.</li>
+        <li><strong>Graph Intelligence Engine:</strong> Python-based engine using NetworkX to model climbing routes as weighted graphs and compute optimal paths using A* search.</li>
+    </ul>
+
+    <h2>Graph Modeling Approach</h2>
+    <p>
+        Each hold is modeled as a node in a graph, with edges representing possible movements between holds. 
+        Edge weights are dynamically calculated based on Euclidean distance, hold type, arm span constraints, and movement feasibility.
+        Unlike a simple shortest-path model, the algorithm tracks left and right hand placements to simulate realistic climbing motion.
+    </p>
+
+    <h2>Challenges & Engineering Decisions</h2>
+    <ul>
+        <li>Abstracting real human movement into measurable computational constraints.</li>
+        <li>Managing complex Git merges and schema conflicts during backend integration.</li>
+        <li>Balancing model realism with computational efficiency during optimization.</li>
+    </ul>
+
+    <h2>Outcomes & Impact</h2>
+    <p>
+        We successfully delivered a fully working prototype during Hacklytics 2026. 
+        The system was tested on a real climb at the CRC, validating our graph-based modeling approach in a real-world environment. 
+        Ascend demonstrates how physical sports can be translated into computational optimization problems, bridging biomechanics and AI.
+    </p>
+
+</div>
+
+</body>
+</html>
