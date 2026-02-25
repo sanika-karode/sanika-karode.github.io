@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ascend | Sanika Karode</title>
+    <title>Ascend: Route Optimization | Sanika Karode</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -20,26 +20,110 @@
             padding: 4rem 1.5rem;
         }
 
-        h1 { color: #f8fafc; font-size: 2.5rem; margin-bottom: 0.5rem; }
-        h2 { color: #38bdf8; margin-top: 2.5rem; border-left: 4px solid #38bdf8; padding-left: 1rem; }
+        h1 { 
+            color: #f8fafc; 
+            font-size: 2.5rem; 
+            margin-bottom: 0.5rem; 
+        }
 
+        h2 { 
+            color: #38bdf8; 
+            margin-top: 2.5rem; 
+            border-left: 4px solid #38bdf8; 
+            padding-left: 1rem; 
+        }
+
+        /* VIDEO SECTION */
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%;
+            margin: 2rem 0;
+            border-radius: 16px;
+            background: #1e293b;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 16px;
+        }
+
+        /* BUTTONS */
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-github { 
+            background: #334155; 
+            color: white; 
+        }
+
+        .btn-github:hover { 
+            background: #475569; 
+        }
+        
+        .btn-demo { 
+            background: #38bdf8; 
+            color: #0f172a; 
+        }
+
+        .btn-demo:hover { 
+            background: #7dd3fc; 
+        }
+
+        /* SPECS GRID */
         .specs-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
+            gap: 1.5rem;
             margin: 2rem 0;
             background: #1e293b;
             padding: 1.5rem;
             border-radius: 12px;
         }
 
-        .spec-item { font-size: 0.9rem; }
-        .spec-label { color: #38bdf8; font-weight: bold; display: block; }
+        .spec-label { 
+            color: #38bdf8; 
+            font-weight: bold; 
+            display: block; 
+            text-transform: uppercase;
+            font-size: 0.75rem;
+        }
 
-        a { color: #38bdf8; text-decoration: none; }
+        /* GENERAL */
+        img {
+            width: 100%;
+            border-radius: 16px;
+            margin: 2rem 0;
+        }
+
+        a { 
+            color: #38bdf8; 
+            text-decoration: none; 
+        }
 
         ul { padding-left: 1.2rem; }
-        li { margin-bottom: 0.5rem; }
+        li { margin-bottom: 0.8rem; }
     </style>
 </head>
 
@@ -48,13 +132,19 @@
 <div class="container">
     <a href="index.html#projects">← Back to Portfolio</a>
 
-    <h1>Ascend: Intelligent Route Optimization for Climbers</h1>
+    <h1>Ascend: Route Optimization for Climbers</h1>
+    <p><em>Hacklytics 2026 | Graph Algorithms & Full-Stack Engineering</em></p>
 
-        <div class="video-container">
-        <iframe src="https://www.youtube.com/watch?v=A2e7Y1sullc" 
-                title="Ascend Demo Video" allowfullscreen></iframe>
+    <!-- VIDEO -->
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/A2e7Y1sullc"
+            title="Ascend Demo Video"
+            allowfullscreen>
+        </iframe>
     </div>
 
+    <!-- BUTTONS -->
     <div class="button-group">
         <a href="https://github.com/sanika-karode/climbers" target="_blank" class="btn btn-github">
             View on GitHub
@@ -64,58 +154,58 @@
         </a>
     </div>
 
-    <img src="ascend.png" alt="Ascend Interface Screenshot">
-
     <h2>Project Overview</h2>
     <p>
-        Ascend is a full-stack intelligent route-analysis platform that helps climbers determine the most efficient path up a rock wall. 
-        Users upload a photo of a wall, select holds, and input personal metrics such as height and experience level. 
-        The system then computes a personalized, physically feasible climbing route using graph-based optimization.
+        Ascend is a full-stack route-analysis platform that helps climbers determine the most efficient and physically feasible path up a rock wall. 
+        Users upload a wall image, select holds, and input personal metrics such as height, arm span, and experience level. 
+        The system computes a personalized route using graph-based optimization techniques.
     </p>
 
     <div class="specs-grid">
-        <div class="spec-item">
-            <span class="spec-label">Built With</span>
-            Python, NetworkX, FastAPI, React, Vite, PostgreSQL, SQLAlchemy
+        <div>
+            <span class="spec-label">Languages & Tools</span>
+            Python, JavaScript, React, Vite, FastAPI, PostgreSQL
         </div>
-        <div class="spec-item">
-            <span class="spec-label">Core Algorithm</span>
-            A* Search (Graph Optimization with Dynamic Hand-State Modeling)
+        <div>
+            <span class="spec-label">Algorithm</span>
+            A* Search with Dynamic Hand-State Modeling
+        </div>
+        <div>
+            <span class="spec-label">Libraries</span>
+            NetworkX, SQLAlchemy
         </div>
     </div>
 
     <h2>Technical Architecture</h2>
-    <p>
-        Ascend was architected as a modular three-layer system:
-    </p>
     <ul>
-        <li><strong>Frontend:</strong> Built with React and Vite, enabling users to upload wall images, select holds, and input body metrics through an intuitive UI.</li>
-        <li><strong>API Layer:</strong> FastAPI backend handling validation, structured communication, and database interactions.</li>
-        <li><strong>Graph Intelligence Engine:</strong> Python-based engine using NetworkX to model climbing routes as weighted graphs and compute optimal paths using A* search.</li>
+        <li><strong>Frontend:</strong> React + Vite interface for uploading wall images, selecting holds, and entering climber metrics.</li>
+        <li><strong>Backend:</strong> FastAPI server managing validation, structured communication, and database interactions.</li>
+        <li><strong>Database:</strong> PostgreSQL with SQLAlchemy ORM for scalable user and route storage.</li>
+        <li><strong>Optimization Engine:</strong> Python-based graph engine using NetworkX to compute weighted routes via A* search.</li>
     </ul>
 
-    <img src="ascendGraph.png" alt="Ascend graph">
+    <img src="ascend.png" alt="Ascend Interface Preview">
+    <img src="ascendGraph.png" alt="Ascend Graph Visualization">
 
     <h2>Graph Modeling Approach</h2>
-    
     <p>
-        Each hold is modeled as a node in a graph, with edges representing possible movements between holds. 
-        Edge weights are dynamically calculated based on Euclidean distance, hold type, arm span constraints, and movement feasibility.
-        Unlike a simple shortest-path model, the algorithm tracks left and right hand placements to simulate realistic climbing motion.
+        Each climbing hold is modeled as a node in a graph, with edges representing feasible movements. 
+        Edge weights are calculated using Euclidean distance, hold type, reach constraints, and difficulty modeling.
+        Unlike traditional shortest-path implementations, Ascend tracks left and right hand states to simulate realistic climbing transitions.
     </p>
 
-    <h2>Challenges & Engineering Decisions</h2>
+    <h2>Engineering Challenges</h2>
     <ul>
-        <li>Abstracting real human movement into measurable computational constraints.</li>
-        <li>Managing complex Git merges and schema conflicts during backend integration.</li>
-        <li>Balancing model realism with computational efficiency during optimization.</li>
+        <li>Abstracting complex human biomechanics into computational constraints.</li>
+        <li>Managing schema conflicts during backend integration and Git merges.</li>
+        <li>Balancing model realism with computational efficiency under hackathon time constraints.</li>
     </ul>
 
-    <h2>Outcomes & Impact</h2>
+    <h2>Outcomes</h2>
     <p>
-        We successfully delivered a fully working prototype during Hacklytics 2026. 
-        The system was tested on a real climb at the CRC, validating our graph-based modeling approach in a real-world environment. 
-        Ascend demonstrates how physical sports can be translated into computational optimization problems, bridging biomechanics and AI.
+        Ascend was successfully developed during Hacklytics 2026 as a fully functional prototype.
+        The model was tested on a real climb at the CRC, validating our graph-based route modeling approach.
+        The project demonstrates how physical movement problems can be translated into intelligent optimization systems.
     </p>
 
 </div>
